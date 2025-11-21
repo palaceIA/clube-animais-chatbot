@@ -6,14 +6,17 @@ logging = get_logger(__name__)
 class SearchSimilarity:
     @staticmethod
     def similarity(query: str, min_score: float = 0.81):
+
+        logging.info(f"[SIMILARITY] Pergunta do usuário : {query}")
+
         results = vectostore.search_similarity(query)
         if not results:
-            logging.info("[GUARDRAILS] Ativado !")
+            logging.info("[GUARDRAILS] Ativado proteção de conteúdo")
             return None
 
         filtered = [r for r in results if getattr(r, "score", 0) >= min_score]
         if not filtered:
-            logging.info("[GUARDRAILS] Ativado !")
+            logging.info("[GUARDRAILS] Ativado proteção de conteúdo")
             return None
 
         return filtered
