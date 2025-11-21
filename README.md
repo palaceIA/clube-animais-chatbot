@@ -8,14 +8,13 @@
 
 ---
 
-Um chatbot construído com técnicas modernas de **IA generativa** e **busca semântica**, capaz de responder perguntas utilizando documentos do domínio **clubedosanimais.com.br**.  
-O projeto combina **embeddings**, **Milvus**, **FastAPI** e **LLMs** para criar um sistema rápido, modular e altamente escalável.
+Um chatbot construído com técnicas modernas de **IA generativa** e **busca semântica**, capaz de responder perguntas utilizando documentos do domínio **clubedosanimais.com.br**.O projeto combina **embeddings**, **Milvus**, **FastAPI** e **LLMs** para criar um sistema rápido, modular e altamente escalável.
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-* **Python 3.10+**
+* **Python 3.13+**
 * **FastAPI** (API REST)
 * **Milvus** (banco vetorial)
 * **Docker + Docker Compose**
@@ -48,7 +47,7 @@ graph TD
 Antes de iniciar, certifique-se de ter instalado:
 
   * **Docker & Docker Compose**
-  * **Python 3.10** ou superior
+  * **Python 3.13** ou superior
   * **Git**
 
 -----
@@ -123,44 +122,4 @@ Documentação automática (Swagger UI/ReDoc):
 👉 [http://localhost:8000/docs](https://www.google.com/search?q=http://localhost:8000/docs)
 
 -----
-
-## 🧠 Sobre o Dataset
-
-Foi utilizado o dataset de perguntas e respostas em Português para popular o banco vetorial.
-
-📦 **qa-portuguese-small**
-🔗 [https://huggingface.co/datasets/Jpzinn654/qa-portuguese-small](https://huggingface.co/datasets/Jpzinn654/qa-portuguese-small)
-
-Com filtragem específica para o domínio: `clubedosanimais.com.br`.
-
------
-
-## 🐾 Funcionalidades
-
-  * ✔️ Busca semântica em documentos reais do Clube dos Animais (RAG)
-  * ✔️ Respostas contextualizadas usando **Groq LLM** (Latência ultrabaixa)
-  * ✔️ Guardrails para evitar alucinações de forma controlada
-  * ✔️ API rápida e escalável com **FastAPI**
-  * ✔️ Suporte a grandes volumes de dados e alta performance via **Milvus**
-
------
-
-## 📂 Estrutura do Projeto (Resumo)
-
-```
-.
-├── 📁 app/
-│   ├── api/          # Definições de rotas da API
-│   ├── services/     # Lógica de negócio (LLM, RAG)
-│   ├── vectorstore/  # Configurações do Milvus/Embeddings
-│   ├── models/       # Pydantic models
-│   └── core/         # Configurações, settings
-├── 📁 milvus/         # Arquivos de configuração do Milvus
-├── 📁 scripts/        # Scripts auxiliares
-├── 📄 .env.example
-├── 📄 docker-compose.yml # Para subir o Milvus
-├── 📄 requirements.txt
-├── 📄 start.sh          # Script de inicialização da API
-└── 📄 README.md
-```
 
