@@ -53,20 +53,20 @@ O Milvus foi escolhido por oferecer:
 
 Os documentos do domínio Clube dos Animais foram convertidos em embeddings e armazenados no Milvus, permitindo consultas rápidas e precisas.
 
-## **5. Arquitetura da Solução **
+## **5. Arquitetura da Solução**
 A arquitetura segue o padrão RAG (Retrieval-Augmented Generation):
 
-Usuário pergunta
-        ↓
-Geração do embedding da pergunta
-        ↓
-Busca semântica no Milvus
-        ↓
-Documentos encontrados?
-        ↙                ↘
-      Sim                Não
-       │                 │
-Resposta via LLM      Guardrails de fallback
+        Usuário pergunta  
+                ↓  
+        Geração do embedding da pergunta  
+                ↓  
+        Busca semântica no Milvus  
+                ↓  
+        Documentos encontrados?  
+        ↙                   ↘  
+      Sim                      Não  
+       │                         │    
+     Resposta via LLM          Guardrails de fallback
 
 Características principais:
 
