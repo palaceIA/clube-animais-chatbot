@@ -10,6 +10,8 @@
 
 Um chatbot construído com técnicas modernas de **IA generativa** e **busca semântica**, capaz de responder perguntas utilizando documentos do domínio **clubedosanimais.com.br**.O projeto combina **embeddings**, **Milvus**, **FastAPI** e **LLMs** para criar um sistema rápido, modular e altamente escalável.
 
+Video : https://www.youtube.com/watch?v=mKSCIru8ycU
+
 ---
 
 ## 🚀 Tecnologias Utilizadas
